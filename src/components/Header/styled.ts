@@ -1,7 +1,8 @@
 import styled from 'styled-components';
-import { breakpoints } from '../theme';
+import { breakpoints } from 'theme';
 
 export const Header = styled.header`
+  background-color: ${({ theme }) => theme.colors.white};
   padding: 16px;
 
   @media ${breakpoints.desktop} {

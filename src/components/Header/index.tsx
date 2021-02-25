@@ -1,5 +1,5 @@
-import { ReactComponent as Logo } from '../assets/logo.svg';
-import * as Styled from './styles';
+import { ReactComponent as Logo } from 'assets/logo.svg';
+import * as Styled from './styled';
 
 function Header() {
   return (
