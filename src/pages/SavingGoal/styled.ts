@@ -64,3 +64,60 @@ export const Icon = styled(HouseIcon)`
 export const CardHeader = styled.div`
   display: flex;
 `;
+
+export const Form = styled.form`
+  margin-top: 28px;
+
+  @media ${breakpoints.desktop} {
+    margin-top: 36px;
+  }
+`;
+
+export const FieldsWrapper = styled.div`
+  @media ${breakpoints.desktop} {
+    display: flex;
+  }
+`;
+
+export const FieldWrapper = styled.div``;
+
+export const FieldLabel = styled.label`
+  font-size: 14px;
+  line-height: 150%;
+  color: ${({ theme }) => theme.colors.blueGray900};
+`;
+
+export const MonthlyAmountInfo = styled.div`
+  border: 1px solid ${({ theme }) => theme.colors.blueGray50};
+  border-radius: 8px;
+  margin-top: 24px;
+`;
+
+export const MonthlyAmount = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: 27px 24px 29px;
+`;
+
+export const MonthlyAmountTitle = styled.h5`
+  font-size: 18px;
+  line-height: 22px;
+  color: ${({ theme }) => theme.colors.blueGray900};
+`;
+
+export const MonthlyAmountValue = styled.h5`
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 22px;
+  color: ${({ theme }) => theme.colors.secondary};
+`;
+
+export const Detail = styled.p`
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  background-color: ${({ theme }) => theme.colors.blueGray10};
+  color: ${({ theme }) => theme.colors.blueGray900};
+  padding: 24px 0;
+  margin: 0;
+`;
