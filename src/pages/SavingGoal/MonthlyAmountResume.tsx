@@ -8,8 +8,9 @@ function MonthlyAmountResume() {
         <Styled.MonthlyAmountValue>$521</Styled.MonthlyAmountValue>
       </Styled.MonthlyAmount>
       <Styled.Detail>
-        You’re planning 48 monthly deposits to reach your $25,000 goal by
-        October 2020.
+        You’re planning <strong>48 monthly deposits</strong> to reach your{' '}
+        <strong>$25,000</strong> goal by
+        <strong> October 2020.</strong>
       </Styled.Detail>
     </Styled.MonthlyAmountInfo>
   );

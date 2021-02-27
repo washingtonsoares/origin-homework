@@ -1,3 +1,4 @@
+import Button from 'components/Button';
 import CurrencyInput from 'components/CurrencyInput';
 import MonthlyAmountResume from './MonthlyAmountResume';
 import * as Styled from './styled';
@@ -15,6 +16,9 @@ function Form() {
         </Styled.FieldWrapper>
       </Styled.FieldsWrapper>
       <MonthlyAmountResume />
+      <Styled.ButtonWrapper>
+        <Button>Confirm</Button>
+      </Styled.ButtonWrapper>
     </Styled.Form>
   );
 }

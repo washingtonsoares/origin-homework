@@ -39,6 +39,7 @@ export const GoalCard = styled.div`
 `;
 
 export const GoalTitle = styled.h1`
+  font-family: 'Rubik', sans-serif;
   color: ${({ theme }) => theme.colors.blueGray900};
   font-weight: 500;
   font-size: 20px;
@@ -79,11 +80,15 @@ export const FieldsWrapper = styled.div`
   }
 `;
 
-export const FieldWrapper = styled.div``;
+export const FieldWrapper = styled.div`
+  margin-bottom: 16px;
+`;
 
 export const FieldLabel = styled.label`
   font-size: 14px;
   line-height: 150%;
+  display: inline-block;
+  margin-bottom: 5px;
   color: ${({ theme }) => theme.colors.blueGray900};
 `;
 
@@ -106,6 +111,7 @@ export const MonthlyAmountTitle = styled.h5`
 `;
 
 export const MonthlyAmountValue = styled.h5`
+  font-family: 'Rubik', sans-serif;
   font-weight: 500;
   font-size: 24px;
   line-height: 22px;
@@ -120,4 +126,10 @@ export const Detail = styled.p`
   color: ${({ theme }) => theme.colors.blueGray900};
   padding: 24px 0;
   margin: 0;
+`;
+
+export const ButtonWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
 `;

@@ -6,17 +6,18 @@ export const Wrapper = styled.div`
   border-radius: 4px;
   padding: 20px;
   display: flex;
-`;
-
-export const Currency = styled.span`
-  margin-right: 13px;
-  color: ${({ theme }) => theme.colors.blueGray100};
-  font-size: 24px;
+  align-items: center;
 `;
 
 export const Input = styled(CurrencyInput)`
+  font-family: 'Rubik', sans-serif;
   border: none;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 20px;
   color: ${({ theme }) => theme.colors.blueGray600};
+  width: 100%;
+
+  &:focus {
+    outline: none;
+  }
 `;
