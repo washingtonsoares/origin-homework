@@ -5,11 +5,7 @@ function CurrencyInput() {
   return (
     <Styled.Wrapper>
       <DollarSignIcon />
-      <Styled.Input
-        groupSeparator=","
-        decimalSeparator="."
-        placeholder="0.00"
-      />
+      <Styled.Input groupSeparator="," decimalSeparator="." />
     </Styled.Wrapper>
   );
 }

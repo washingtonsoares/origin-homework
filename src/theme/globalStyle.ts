@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${({ theme }) => theme.colors.bgPrimary};
   }
 
-  h1, h5 {
+  h1, h3, h5 {
     margin: 0;
   }
 

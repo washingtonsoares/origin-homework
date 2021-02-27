@@ -1,5 +1,6 @@
 import Button from 'components/Button';
 import CurrencyInput from 'components/CurrencyInput';
+import MonthPicker from 'components/MonthPicker';
 import MonthlyAmountResume from './MonthlyAmountResume';
 import * as Styled from './styled';
 
@@ -13,6 +14,7 @@ function Form() {
         </Styled.FieldWrapper>
         <Styled.FieldWrapper>
           <Styled.FieldLabel>Reach goal by</Styled.FieldLabel>
+          <MonthPicker />
         </Styled.FieldWrapper>
       </Styled.FieldsWrapper>
       <MonthlyAmountResume />

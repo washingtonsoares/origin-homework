@@ -81,7 +81,12 @@ export const FieldsWrapper = styled.div`
 `;
 
 export const FieldWrapper = styled.div`
+  flex: 1;
   margin-bottom: 16px;
+
+  @media ${breakpoints.desktop} {
+    margin-right: 16px;
+  }
 `;
 
 export const FieldLabel = styled.label`
