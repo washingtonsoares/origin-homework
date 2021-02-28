@@ -4,7 +4,7 @@ import * as Styled from './styled';
 function Header() {
   return (
     <Styled.Header>
-      <Logo />
+      <Logo title="Origin's logo" />
     </Styled.Header>
   );
 }
