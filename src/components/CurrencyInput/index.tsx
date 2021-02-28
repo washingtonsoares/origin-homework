@@ -1,11 +1,19 @@
 import * as Styled from './styled';
 import { ReactComponent as DollarSignIcon } from 'assets/dollar-sign-icon.svg';
 
-function CurrencyInput() {
+type Props = {
+  onChange: (value: number) => void;
+};
+
+function CurrencyInput({ onChange }: Props) {
   return (
     <Styled.Wrapper>
       <DollarSignIcon />
-      <Styled.Input groupSeparator="," decimalSeparator="." />
+      <Styled.Input
+        onValueChange={(value) => onChange(Number(value))}
+        groupSeparator=","
+        decimalSeparator="."
+      />
     </Styled.Wrapper>
   );
 }

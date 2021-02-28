@@ -13,4 +13,8 @@ export const Button = styled.button`
   font-size: 16px;
   line-height: 20px;
   text-align: center;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.primaryHover};
+  }
 `;

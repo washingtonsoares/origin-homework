@@ -1,16 +1,38 @@
 import * as Styled from './styled';
+import { getMonthTextFromDate, getYearFromDate } from 'utils/date';
+import { formatCurrency } from 'utils/currency';
 
-function MonthlyAmountResume() {
+type Props = {
+  totalAmount: number;
+  monthsAmount: number;
+  monthlyDeposits: number;
+  completionDate: Date;
+};
+
+function MonthlyAmountResume({
+  totalAmount,
+  monthsAmount,
+  monthlyDeposits,
+  completionDate
+}: Props) {
+  const month = getMonthTextFromDate(completionDate);
+  const year = getYearFromDate(completionDate);
+
   return (
     <Styled.MonthlyAmountInfo>
       <Styled.MonthlyAmount>
         <Styled.MonthlyAmountTitle>Monthly amount</Styled.MonthlyAmountTitle>
-        <Styled.MonthlyAmountValue>$521</Styled.MonthlyAmountValue>
+        <Styled.MonthlyAmountValue>
+          {formatCurrency(monthlyDeposits)}
+        </Styled.MonthlyAmountValue>
       </Styled.MonthlyAmount>
       <Styled.Detail>
-        You’re planning <strong>48 monthly deposits</strong> to reach your{' '}
-        <strong>$25,000</strong> goal by
-        <strong> October 2020.</strong>
+        You’re planning <strong>{monthsAmount} monthly deposits</strong> to
+        reach your <strong>{formatCurrency(totalAmount)}</strong> goal by
+        <strong>
+          {' '}
+          {month} {year}.
+        </strong>
       </Styled.Detail>
     </Styled.MonthlyAmountInfo>
   );

@@ -36,6 +36,10 @@ export const GoalCard = styled.div`
   box-shadow: 0px 16px 32px rgba(30, 42, 50, 0.08);
   border-radius: 8px;
   padding: 30px 24px 40px;
+
+  @media ${breakpoints.desktop} {
+    padding: 35px 40px 40px;
+  }
 `;
 
 export const GoalTitle = styled.h1`
@@ -107,6 +111,10 @@ export const MonthlyAmount = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 27px 24px 29px;
+
+  @media ${breakpoints.desktop} {
+    padding: 32px 32px 23px 32px;
+  }
 `;
 
 export const MonthlyAmountTitle = styled.h5`
@@ -129,8 +137,12 @@ export const Detail = styled.p`
   text-align: center;
   background-color: ${({ theme }) => theme.colors.blueGray10};
   color: ${({ theme }) => theme.colors.blueGray900};
-  padding: 24px 0;
+  padding: 24px 32px;
   margin: 0;
+
+  @media ${breakpoints.desktop} {
+    text-align: left;
+  }
 `;
 
 export const ButtonWrapper = styled.div`

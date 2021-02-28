@@ -1,15 +1,23 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { getInitialDate } from './helpers';
 import {
   decreaseMonth,
   getMonthTextFromDate,
   getYearFromDate,
-  increaseMonth,
-  getInitialDate
-} from './helpers';
+  increaseMonth
+} from 'utils/date';
 import * as Styled from './styled';
 
-function MonthPicker() {
+type Props = {
+  onChange: (date: Date) => void;
+};
+
+function MonthPicker({ onChange }: Props) {
   const [date, setDate] = useState(() => getInitialDate());
+
+  useEffect(() => {
+    onChange(date);
+  }, [onChange, date]);
 
   const handleIncrement = () => {
     setDate((currentDate) => increaseMonth(currentDate));
