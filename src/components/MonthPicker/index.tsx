@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { getInitialDate } from './helpers';
 import {
   decreaseMonth,
   getMonthTextFromDate,
@@ -10,10 +9,11 @@ import * as Styled from './styled';
 
 type Props = {
   onChange: (date: Date) => void;
+  initialDate: Date;
 };
 
-function MonthPicker({ onChange }: Props) {
-  const [date, setDate] = useState(() => getInitialDate());
+function MonthPicker({ onChange, initialDate }: Props) {
+  const [date, setDate] = useState(initialDate);
 
   useEffect(() => {
     onChange(date);
@@ -29,14 +29,24 @@ function MonthPicker({ onChange }: Props) {
 
   return (
     <Styled.Wrapper>
-      <Styled.LeftArrowIcon role="button" onClick={handleDecrement} />
+      <Styled.LeftArrowIcon
+        title="Decrease month"
+        role="button"
+        tabIndex={0}
+        onClick={handleDecrement}
+      />
       <Styled.MonthWrapper>
         <Styled.SelectedMonth>
           {getMonthTextFromDate(date)}
         </Styled.SelectedMonth>
         <Styled.SelectedYear>{getYearFromDate(date)}</Styled.SelectedYear>
       </Styled.MonthWrapper>
-      <Styled.RightArrowIcon role="button" onClick={handleIncrement} />
+      <Styled.RightArrowIcon
+        title="Increase month"
+        role="button"
+        tabIndex={0}
+        onClick={handleIncrement}
+      />
     </Styled.Wrapper>
   );
 }

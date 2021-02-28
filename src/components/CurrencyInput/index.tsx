@@ -14,7 +14,6 @@ function CurrencyInput({ onChange }: Props) {
         groupSeparator=","
         decimalSeparator="."
         placeholder="0,00"
-        autoFocus
       />
     </Styled.Wrapper>
   );

@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { ReactComponent as ArrowIconComponent } from 'assets/arrow-icon.svg';
-import { breakpoints } from 'theme';
 
 export const Wrapper = styled.div`
   display: flex;
@@ -8,15 +7,15 @@ export const Wrapper = styled.div`
   align-items: center;
   border: 1px solid ${({ theme }) => theme.colors.blueGray50};
   border-radius: 4px;
-  padding: 7.5px 20px;
-
-  @media ${breakpoints.desktop} {
-    padding: 4px 20px;
-  }
 `;
 
 export const LeftArrowIcon = styled(ArrowIconComponent)`
+  padding: 21px 20px;
   cursor: pointer;
+
+  &:focus {
+    outline: 1px solid ${({ theme }) => theme.colors.primary};
+  }
 `;
 
 export const RightArrowIcon = styled(LeftArrowIcon)`

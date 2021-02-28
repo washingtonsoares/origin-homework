@@ -1,8 +1,10 @@
+import { DEFAULT_LOCALE } from 'constants/locale';
+
 const DEFAULT_INCREMENT = 1;
 const NUMBER_OF_MONTHS = 12;
 
 export function getMonthTextFromDate(date: Date) {
-  const formatter = new Intl.DateTimeFormat('en-US', { month: 'long' });
+  const formatter = new Intl.DateTimeFormat(DEFAULT_LOCALE, { month: 'long' });
 
   return formatter.format(date);
 }

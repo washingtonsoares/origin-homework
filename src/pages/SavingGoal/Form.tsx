@@ -1,6 +1,7 @@
 import Button from 'components/Button';
 import CurrencyInput from 'components/CurrencyInput';
 import MonthPicker from 'components/MonthPicker';
+import { getInitialDate } from 'components/MonthPicker/helpers';
 import { useState } from 'react';
 import { getMonthDiff } from 'utils/date';
 import { getMonthlyDeposits } from './helpers';
@@ -9,7 +10,7 @@ import * as Styled from './styled';
 
 function Form() {
   const [totalAmount, setTotalAmount] = useState<number>();
-  const [selectedDate, setselectedDate] = useState<Date>(new Date());
+  const [selectedDate, setselectedDate] = useState(() => getInitialDate());
   const monthsAmount = getMonthDiff(new Date(), selectedDate);
   const monthlyDeposits = getMonthlyDeposits(totalAmount, monthsAmount);
 
@@ -30,7 +31,10 @@ function Form() {
         </Styled.FieldWrapper>
         <Styled.FieldWrapper>
           <Styled.FieldLabel>Reach goal by</Styled.FieldLabel>
-          <MonthPicker onChange={handleMonthChange} />
+          <MonthPicker
+            initialDate={selectedDate}
+            onChange={handleMonthChange}
+          />
         </Styled.FieldWrapper>
       </Styled.FieldsWrapper>
       {!!totalAmount && (
