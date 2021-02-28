@@ -1,5 +1,10 @@
 # Origin Frontend Take-Home Assignment
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/cffac3a5-0aa5-4ddf-a9af-354220196b67/deploy-status)](https://app.netlify.com/sites/saving-goal/deploys)
+<a href="#badge">
+    <img alt="code style: prettier" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square">
+</a>
+
 **IMPORTANT**: you can choose any technology stack to implement this assignment. Using our stack is not a requirement in the selection process - we will consider exclusively the quality of your project (technology and product-wise) to evaluate your work. We've added a project structure in this repository (a buildwith react, redux, jest, styled-components and typescript) to save you time if you want to use it. If you prefer another stack, feel free to use it.
 
 Origin is a platform that helps our customers' employees put their financial lives on track.
