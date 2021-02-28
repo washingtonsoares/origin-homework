@@ -17,4 +17,9 @@ export const Button = styled.button`
   &:hover {
     background-color: ${({ theme }) => theme.colors.primaryHover};
   }
+
+  &:focus {
+    box-shadow: rgb(27 49 168 / 50%) 0px 8px 16px 0px;
+    background-color: ${({ theme }) => theme.colors.primaryHover};
+  }
 `;

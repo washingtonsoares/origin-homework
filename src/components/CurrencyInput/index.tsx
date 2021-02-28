@@ -8,8 +8,9 @@ type Props = {
 function CurrencyInput({ onChange }: Props) {
   return (
     <Styled.Wrapper>
-      <DollarSignIcon />
+      <DollarSignIcon title="Dollar sign icon" />
       <Styled.Input
+        id="money"
         onValueChange={(value) => onChange(Number(value))}
         groupSeparator=","
         decimalSeparator="."
