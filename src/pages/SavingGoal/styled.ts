@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { breakpoints } from 'theme';
+import { breakpoints, fontFamilies } from 'theme';
 import { ReactComponent as HouseIcon } from 'assets/house-icon.svg';
 
 export const Wrapper = styled.main`
@@ -43,7 +43,7 @@ export const GoalCard = styled.div`
 `;
 
 export const GoalTitle = styled.h1`
-  font-family: 'Rubik', sans-serif;
+  font-family: ${fontFamilies.rubik};
   color: ${({ theme }) => theme.colors.blueGray900};
   font-weight: 500;
   font-size: 20px;
@@ -124,7 +124,7 @@ export const MonthlyAmountTitle = styled.h5`
 `;
 
 export const MonthlyAmountValue = styled.h5`
-  font-family: 'Rubik', sans-serif;
+  font-family: ${fontFamilies.rubik};
   font-weight: 500;
   font-size: 24px;
   line-height: 22px;

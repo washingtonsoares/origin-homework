@@ -14,6 +14,11 @@ const theme = {
   }
 } as const;
 
+export const fontFamilies = {
+  workSans: "'Work Sans', sans-serif",
+  rubik: "'Rubik', sans-serif"
+} as const;
+
 const devices = {
   mobile: '480px',
   desktop: '800px'

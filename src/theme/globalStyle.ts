@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { fontFamilies } from 'theme';
 
 const GlobalStyle = createGlobalStyle`
   body, html {
@@ -7,7 +8,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: 'Work Sans', sans-serif;
+    font-family: ${fontFamilies.workSans};
     background-color: ${({ theme }) => theme.colors.bgPrimary};
   }
 
