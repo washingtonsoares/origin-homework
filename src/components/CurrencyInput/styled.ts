@@ -4,7 +4,7 @@ import CurrencyInput from 'react-currency-input-field';
 export const Wrapper = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.blueGray50};
   border-radius: 4px;
-  padding: 20px;
+  padding: 16px;
   display: flex;
   align-items: center;
 `;

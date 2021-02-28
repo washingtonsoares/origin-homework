@@ -1,3 +1,5 @@
 export function getMonthlyDeposits(totalAmount = 0, monthsAmount: number) {
-  return totalAmount / monthsAmount;
+  const monthlyDeposits = totalAmount / monthsAmount;
+
+  return Math.ceil(monthlyDeposits);
 }

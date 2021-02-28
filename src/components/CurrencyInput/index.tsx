@@ -13,6 +13,8 @@ function CurrencyInput({ onChange }: Props) {
         onValueChange={(value) => onChange(Number(value))}
         groupSeparator=","
         decimalSeparator="."
+        placeholder="0,00"
+        autoFocus
       />
     </Styled.Wrapper>
   );
