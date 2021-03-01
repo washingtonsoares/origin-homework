@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { ReactComponent as ArrowIconComponent } from 'assets/arrow-icon.svg';
+import styled, { css } from 'styled-components';
+import { ReactComponent as ArrowIcon } from 'assets/arrow-icon.svg';
 
 export const Wrapper = styled.div`
   display: flex;
@@ -9,14 +9,21 @@ export const Wrapper = styled.div`
   border-radius: 4px;
 `;
 
-export const LeftArrowIcon = styled(ArrowIconComponent)`
+export const ButtonWrapper = styled.button`
   padding: 21px 20px;
   cursor: pointer;
+  border: none;
+  background-color: ${({ theme }) => theme.colors.neutralWhite};
+  outline: none;
 
-  &:focus {
-    outline: 1px solid ${({ theme }) => theme.colors.primary};
-  }
+  ${({ disabled }) =>
+    disabled &&
+    css`
+      cursor: not-allowed;
+    `}
 `;
+
+export const LeftArrowIcon = styled(ArrowIcon)``;
 
 export const RightArrowIcon = styled(LeftArrowIcon)`
   transform: rotate(180deg);

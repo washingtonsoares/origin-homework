@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Button = styled.button`
-  background-color: ${({ theme }) => theme.colors.primary};
-  color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.brandColorPrimary};
+  color: ${({ theme }) => theme.colors.neutralWhite};
   border: none;
   outline: none;
   cursor: pointer;

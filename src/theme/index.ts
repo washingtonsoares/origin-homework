@@ -1,10 +1,10 @@
 const theme = {
   colors: {
-    primary: '#1B31A8',
+    neutralWhite: '#FFF',
+    brandColorPrimary: '#1B31A8',
     primaryHover: '#2C44C9',
     bgPrimary: '#F4F8FA',
-    secondary: '#0079FF',
-    white: '#FFF',
+    brandColorSecondary: '#0079FF',
     blueGray10: '#F4F8FA',
     blueGray50: '#E9EEF2',
     blueGray100: '#CBD5DC',

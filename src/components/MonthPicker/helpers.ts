@@ -1,7 +1,8 @@
-import { increaseMonth } from 'utils/date';
+import { decreaseMonth } from 'utils/date';
 
-export function getInitialDate() {
+export function shouldDisablePreviousMonth(selectedDate: Date) {
+  const previousSelectedDate = decreaseMonth(selectedDate);
   const currentDate = new Date();
 
-  return increaseMonth(currentDate);
+  return previousSelectedDate < currentDate;
 }

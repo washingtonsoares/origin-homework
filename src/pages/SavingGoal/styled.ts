@@ -22,7 +22,7 @@ export const CardWrapper = styled.div`
 
 export const SubTitle = styled.h5`
   font-size: 18px;
-  color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.brandColorPrimary};
   text-align: center;
   margin-bottom: 24px;
 
@@ -32,7 +32,7 @@ export const SubTitle = styled.h5`
 `;
 
 export const GoalCard = styled.div`
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.neutralWhite};
   box-shadow: 0px 16px 32px rgba(30, 42, 50, 0.08);
   border-radius: 8px;
   padding: 30px 24px 40px;
@@ -128,7 +128,7 @@ export const MonthlyAmountValue = styled.h5`
   font-weight: 500;
   font-size: 24px;
   line-height: 22px;
-  color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.brandColorSecondary};
 `;
 
 export const Detail = styled.p`

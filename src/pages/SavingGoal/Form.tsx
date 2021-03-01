@@ -1,10 +1,9 @@
 import Button from 'components/Button';
 import CurrencyInput from 'components/CurrencyInput';
 import MonthPicker from 'components/MonthPicker';
-import { getInitialDate } from 'components/MonthPicker/helpers';
 import { useState } from 'react';
 import { getMonthDiff } from 'utils/date';
-import { getMonthlyDeposits } from './helpers';
+import { getMonthlyDeposits, getInitialDate } from './helpers';
 import MonthlyAmountResume from './MonthlyAmountResume';
 import * as Styled from './styled';
 
@@ -22,8 +21,12 @@ function Form() {
     setTotalAmount(amount);
   };
 
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+  };
+
   return (
-    <Styled.Form>
+    <Styled.Form onSubmit={handleSubmit}>
       <Styled.FieldsWrapper>
         <Styled.FieldWrapper>
           <Styled.FieldLabel>Total amount</Styled.FieldLabel>
@@ -31,10 +34,7 @@ function Form() {
         </Styled.FieldWrapper>
         <Styled.FieldWrapper>
           <Styled.FieldLabel>Reach goal by</Styled.FieldLabel>
-          <MonthPicker
-            initialDate={selectedDate}
-            onChange={handleMonthChange}
-          />
+          <MonthPicker startDate={selectedDate} onChange={handleMonthChange} />
         </Styled.FieldWrapper>
       </Styled.FieldsWrapper>
       {!!totalAmount && (
@@ -43,7 +43,7 @@ function Form() {
             totalAmount={totalAmount}
             monthsAmount={monthsAmount}
             monthlyDeposits={monthlyDeposits}
-            completionDate={selectedDate ?? new Date()}
+            completionDate={selectedDate}
           />
           <Styled.ButtonWrapper>
             <Button>Confirm</Button>
