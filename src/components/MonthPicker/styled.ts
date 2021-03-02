@@ -38,7 +38,7 @@ export const RightArrowIcon = styled(LeftArrowIcon)`
   transform: rotate(180deg);
 `;
 
-export const MonthWrapper = styled.div``;
+export const DateWrapper = styled.div``;
 
 export const SelectedMonth = styled.h3`
   font-weight: 600;

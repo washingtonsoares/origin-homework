@@ -6,7 +6,6 @@ const FieldLabel = styled.label`
   line-height: 21px;
   display: inline-block;
   margin-bottom: 5px;
-  color: ${({ theme }) => theme.colors.blueGray900};
 
   ${mediaQueries.desktop} {
     font-size: 14px;

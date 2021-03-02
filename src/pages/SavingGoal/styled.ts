@@ -41,7 +41,6 @@ export const GoalCard = styled.div`
 
 export const GoalTitle = styled.h1`
   font-family: ${fontFamilies.rubik};
-  color: ${({ theme }) => theme.colors.blueGray900};
   font-weight: 500;
   font-size: 20px;
   line-height: 120%;
@@ -109,7 +108,6 @@ export const MonthlyAmount = styled.div`
 export const MonthlyAmountTitle = styled.h5`
   font-size: 18px;
   line-height: 22px;
-  color: ${({ theme }) => theme.colors.blueGray900};
 `;
 
 export const MonthlyAmountValue = styled.h5`
@@ -125,7 +123,6 @@ export const Detail = styled.p`
   line-height: 16px;
   text-align: center;
   background-color: ${({ theme }) => theme.colors.blueGray10};
-  color: ${({ theme }) => theme.colors.blueGray900};
   padding: 24px 32px;
   margin: 0;
 

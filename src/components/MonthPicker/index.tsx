@@ -44,27 +44,33 @@ function MonthPicker({ onChange, startDate }: Props) {
   return (
     <Styled.Wrapper onKeyDown={handleKeyDown}>
       <FieldLabel htmlFor="month-picker">Reach goal by</FieldLabel>
-      <Styled.MonthPickerContainer id="month-picker" tabIndex={0}>
+      <Styled.MonthPickerContainer
+        id="month-picker"
+        aria-label="Select a month"
+        tabIndex={0}
+      >
         <Styled.ButtonWrapper
           type="button"
           title="Decrease month"
-          onClick={handleDecrement}
           disabled={disablePreviousMonth}
+          onClick={handleDecrement}
+          tabIndex={-1}
         >
           <Styled.LeftArrowIcon />
         </Styled.ButtonWrapper>
-        <Styled.MonthWrapper>
+        <Styled.DateWrapper>
           <Styled.SelectedMonth>
             {getMonthTextFromDate(startDate)}
           </Styled.SelectedMonth>
           <Styled.SelectedYear>
             {getYearFromDate(startDate)}
           </Styled.SelectedYear>
-        </Styled.MonthWrapper>
+        </Styled.DateWrapper>
         <Styled.ButtonWrapper
           type="button"
           title="Increase month"
           onClick={handleIncrement}
+          tabIndex={-1}
         >
           <Styled.RightArrowIcon />
         </Styled.ButtonWrapper>

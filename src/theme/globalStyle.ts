@@ -10,6 +10,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: ${fontFamilies.workSans};
     background-color: ${({ theme }) => theme.colors.bgPrimary};
+    color: ${({ theme }) => theme.colors.blueGray900};
   }
 
   h1, h3, h5 {
