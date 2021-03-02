@@ -48,6 +48,7 @@ function MonthPicker({ onChange, startDate }: Props) {
         id="month-picker"
         aria-label="Select a month"
         tabIndex={0}
+        data-testid="month-picker"
       >
         <Styled.ButtonWrapper
           type="button"

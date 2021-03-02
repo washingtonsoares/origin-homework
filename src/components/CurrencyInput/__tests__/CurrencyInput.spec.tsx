@@ -14,8 +14,13 @@ test('should render CurrencyInput and trigger onChange', () => {
   const onChangeFn = jest.fn();
   render(<CurrencyInput onChange={onChangeFn} />);
 
-  userEvent.type(screen.getByLabelText('Total amount'), '3500.44');
+  const input = screen.getByLabelText('Total amount');
 
+  userEvent.type(input, '3500.44');
   expect(screen.getByDisplayValue('3,500.44')).toBeInTheDocument();
   expect(onChangeFn).toBeCalledWith(3500.44);
+
+  userEvent.clear(input);
+  expect(screen.getByDisplayValue('')).toBeInTheDocument();
+  expect(onChangeFn).toBeCalledWith(undefined);
 });
