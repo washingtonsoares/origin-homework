@@ -2,11 +2,17 @@ import FieldLabel from 'components/FieldLabel';
 import * as Styled from './styled';
 
 type Props = {
-  onChange: (value: number) => void;
+  onChange: (value: number | undefined) => void;
   className?: string;
+  value?: number;
 };
 
-function CurrencyInput({ onChange, className }: Props) {
+function CurrencyInput({ onChange, className, value }: Props) {
+  const handleChange = (value: string | undefined) => {
+    const normalizedValue = value ? Number(value) : undefined;
+    onChange(normalizedValue);
+  };
+
   return (
     <Styled.Wrapper className={className}>
       <FieldLabel htmlFor="currency-input">Total amount</FieldLabel>
@@ -14,10 +20,10 @@ function CurrencyInput({ onChange, className }: Props) {
         <Styled.DollarSignIcon title="Dollar sign icon" />
         <Styled.Input
           id="currency-input"
-          onValueChange={(value) => onChange(Number(value))}
+          onValueChange={(value) => handleChange(value)}
           groupSeparator=","
           decimalSeparator="."
-          placeholder="0,00"
+          value={value}
         />
       </Styled.InputWrapper>
     </Styled.Wrapper>

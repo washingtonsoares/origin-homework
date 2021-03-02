@@ -3,15 +3,15 @@ import { getMonthTextFromDate, getYearFromDate } from 'utils/date';
 import { formatCurrency } from 'utils/currency';
 
 type Props = {
-  totalAmount: number;
-  monthsAmount: number;
+  totalAmount?: number;
+  monthsDiff?: number;
   monthlyDeposits: number;
   completionDate: Date;
 };
 
 function MonthlyAmountResume({
   totalAmount,
-  monthsAmount,
+  monthsDiff,
   monthlyDeposits,
   completionDate
 }: Props) {
@@ -27,7 +27,7 @@ function MonthlyAmountResume({
         </Styled.MonthlyAmountValue>
       </Styled.MonthlyAmount>
       <Styled.Detail>
-        You&apos;re planning <strong>{monthsAmount} monthly deposits</strong> to
+        You&apos;re planning <strong>{monthsDiff} monthly deposits</strong> to
         reach your <strong>{formatCurrency(totalAmount)}</strong> goal by
         <strong>
           {' '}

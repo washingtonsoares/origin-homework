@@ -26,10 +26,6 @@ export const SubTitle = styled.h5`
   color: ${({ theme }) => theme.colors.brandColorPrimary};
   text-align: center;
   margin-bottom: 24px;
-
-  strong {
-    font-weight: 600;
-  }
 `;
 
 export const GoalCard = styled.div`
