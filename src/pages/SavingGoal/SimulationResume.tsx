@@ -27,7 +27,7 @@ function MonthlyAmountResume({
         </Styled.MonthlyAmountValue>
       </Styled.MonthlyAmount>
       <Styled.Detail>
-        You’re planning <strong>{monthsAmount} monthly deposits</strong> to
+        You&apos;re planning <strong>{monthsAmount} monthly deposits</strong> to
         reach your <strong>{formatCurrency(totalAmount)}</strong> goal by
         <strong>
           {' '}

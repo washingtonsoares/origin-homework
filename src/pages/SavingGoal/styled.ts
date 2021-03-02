@@ -1,13 +1,14 @@
 import styled from 'styled-components';
-import { breakpoints, fontFamilies } from 'theme';
+import { mediaQueries, fontFamilies } from 'theme';
 import { ReactComponent as HouseIcon } from 'assets/house-icon.svg';
+import CurrencyInputComponent from 'components/CurrencyInput';
 
 export const Wrapper = styled.main`
   padding-top: 32px;
   display: flex;
   justify-content: center;
 
-  @media ${breakpoints.desktop} {
+  ${mediaQueries.desktop} {
     padding-top: 48px;
   }
 `;
@@ -15,7 +16,7 @@ export const Wrapper = styled.main`
 export const CardWrapper = styled.div`
   width: 100%;
 
-  @media ${breakpoints.desktop} {
+  ${mediaQueries.desktop} {
     width: 560px;
   }
 `;
@@ -37,7 +38,7 @@ export const GoalCard = styled.div`
   border-radius: 8px;
   padding: 30px 24px 40px;
 
-  @media ${breakpoints.desktop} {
+  ${mediaQueries.desktop} {
     padding: 35px 40px 40px;
   }
 `;
@@ -71,34 +72,26 @@ export const CardHeader = styled.div`
 `;
 
 export const Form = styled.form`
-  margin-top: 28px;
+  margin-top: 10px;
 
-  @media ${breakpoints.desktop} {
-    margin-top: 36px;
+  ${mediaQueries.desktop} {
+    margin-top: 20px;
   }
 `;
 
 export const FieldsWrapper = styled.div`
-  @media ${breakpoints.desktop} {
+  ${mediaQueries.desktop} {
     display: flex;
   }
 `;
 
-export const FieldWrapper = styled.div`
-  flex: 1;
-  margin-bottom: 16px;
+export const CurrencyInput = styled(CurrencyInputComponent)`
+  margin-bottom: 15px;
 
-  @media ${breakpoints.desktop} {
+  ${mediaQueries.desktop} {
+    width: 56%;
     margin-right: 16px;
   }
-`;
-
-export const FieldLabel = styled.label`
-  font-size: 14px;
-  line-height: 150%;
-  display: inline-block;
-  margin-bottom: 5px;
-  color: ${({ theme }) => theme.colors.blueGray900};
 `;
 
 export const MonthlyAmountInfo = styled.div`
@@ -112,7 +105,7 @@ export const MonthlyAmount = styled.div`
   justify-content: space-between;
   padding: 27px 24px 29px;
 
-  @media ${breakpoints.desktop} {
+  ${mediaQueries.desktop} {
     padding: 32px 32px 23px 32px;
   }
 `;
@@ -140,7 +133,7 @@ export const Detail = styled.p`
   padding: 24px 32px;
   margin: 0;
 
-  @media ${breakpoints.desktop} {
+  ${mediaQueries.desktop} {
     text-align: left;
   }
 `;

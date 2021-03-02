@@ -1,7 +1,7 @@
 import * as Styled from './styled';
 import SubTitle from './SubTitle';
-import CardHeader from './CardHeader';
-import Form from './Form';
+import GoalDetails from './GoalDetails';
+import SimulationForm from './SimulationForm';
 
 function SavingGoal() {
   return (
@@ -9,8 +9,8 @@ function SavingGoal() {
       <Styled.CardWrapper>
         <SubTitle />
         <Styled.GoalCard>
-          <CardHeader />
-          <Form />
+          <GoalDetails />
+          <SimulationForm />
         </Styled.GoalCard>
       </Styled.CardWrapper>
     </Styled.Wrapper>

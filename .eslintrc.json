@@ -28,7 +28,6 @@
 	"plugins": ["react-hooks", "@typescript-eslint", "prettier"],
 	"rules": {
 		"react/react-in-jsx-scope": "off",
-    "react/no-unescaped-entities": "off",
 		"react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }],
     "import/no-named-as-default": 0,
     "react-hooks/rules-of-hooks": "error",

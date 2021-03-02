@@ -24,8 +24,8 @@ const devices = {
   desktop: '800px'
 } as const;
 
-export const breakpoints = {
-  desktop: `(min-width: ${devices.desktop})`
+export const mediaQueries = {
+  desktop: `@media (min-width: ${devices.desktop})`
 } as const;
 
 export type ThemeScheme = typeof theme;

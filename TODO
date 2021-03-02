@@ -1,3 +1,19 @@
 - mostrar o Monthly amount só depois que digitar um valor
 - tag strong
+- campo de currency deve ser maior que o de data
+- controlar o valor do currencyInput no pai
+- trazer campo input já inicializado
+- usar label dentro do input
 - tratar cenário de submit do form
+- ativar outline dos campos
+- ativar autofocus
+- adicionar default color no body
+- adicionar hover nas setas do monthPicker
+- isSameMonth(this._nextMonth, date)
+- useEffect((): void => {
+    setMonthlyAmount(amount / months);
+  }, [amount, months]);
+- criar hoook para lógicas do Form
+- arrumar Let's
+- estudar medida REM
+- Accessibility section no readme

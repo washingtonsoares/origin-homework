@@ -3,7 +3,7 @@ import * as Styled from './styled';
 function SubTitle() {
   return (
     <Styled.SubTitle>
-      Let's plan your <strong>saving goal.</strong>
+      Let&apos;s plan your <strong>saving goal.</strong>
     </Styled.SubTitle>
   );
 }

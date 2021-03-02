@@ -1,10 +1,9 @@
 import Button from 'components/Button';
-import CurrencyInput from 'components/CurrencyInput';
 import MonthPicker from 'components/MonthPicker';
 import { useState } from 'react';
 import { getMonthDiff } from 'utils/date';
 import { getMonthlyDeposits, getInitialDate } from './helpers';
-import MonthlyAmountResume from './MonthlyAmountResume';
+import SimulationResume from './SimulationResume';
 import * as Styled from './styled';
 
 function Form() {
@@ -28,18 +27,12 @@ function Form() {
   return (
     <Styled.Form onSubmit={handleSubmit}>
       <Styled.FieldsWrapper>
-        <Styled.FieldWrapper>
-          <Styled.FieldLabel>Total amount</Styled.FieldLabel>
-          <CurrencyInput onChange={handleTotalAmountChange} />
-        </Styled.FieldWrapper>
-        <Styled.FieldWrapper>
-          <Styled.FieldLabel>Reach goal by</Styled.FieldLabel>
-          <MonthPicker startDate={selectedDate} onChange={handleMonthChange} />
-        </Styled.FieldWrapper>
+        <Styled.CurrencyInput onChange={handleTotalAmountChange} />
+        <MonthPicker startDate={selectedDate} onChange={handleMonthChange} />
       </Styled.FieldsWrapper>
       {!!totalAmount && (
         <>
-          <MonthlyAmountResume
+          <SimulationResume
             totalAmount={totalAmount}
             monthsAmount={monthsAmount}
             monthlyDeposits={monthlyDeposits}

@@ -4,5 +4,5 @@ export function shouldDisablePreviousMonth(selectedDate: Date) {
   const previousSelectedDate = decreaseMonth(selectedDate);
   const currentDate = new Date();
 
-  return previousSelectedDate < currentDate;
+  return previousSelectedDate.getMonth() === currentDate.getMonth();
 }
