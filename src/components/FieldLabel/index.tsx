@@ -1,4 +1,4 @@
-import * as Styled from './styled';
+import { Label } from './styled';
 
 type Props = {
   children: React.ReactNode;
@@ -6,7 +6,7 @@ type Props = {
 };
 
 function FieldLabel({ children, htmlFor }: Props) {
-  return <Styled.Label htmlFor={htmlFor}>{children}</Styled.Label>;
+  return <Label htmlFor={htmlFor}>{children}</Label>;
 }
 
 export default FieldLabel;

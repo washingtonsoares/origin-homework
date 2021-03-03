@@ -12,6 +12,10 @@ export const MonthPickerContainer = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.blueGray50};
   border-radius: 4px;
   padding: 5px;
+
+  &:focus {
+    outline: 1px auto ${({ theme }) => theme.colors.brandColorPrimary};
+  }
 `;
 
 export const ButtonWrapper = styled.button`

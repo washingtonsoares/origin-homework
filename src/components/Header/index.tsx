@@ -1,12 +1,12 @@
 import { ReactComponent as Logo } from 'assets/logo.svg';
-import * as Styled from './styled';
+import { Header } from './styled';
 
-function Header() {
+function HeaderComponent() {
   return (
-    <Styled.Header>
+    <Header>
       <Logo title="Origin's logo" />
-    </Styled.Header>
+    </Header>
   );
 }
 
-export default Header;
+export default HeaderComponent;

@@ -4,16 +4,22 @@ import { useEffect, useState } from 'react';
 import { getMonthDiff } from 'utils/date';
 import { getMonthlyDeposits, getInitialDate } from './helpers';
 import SimulationResume from './SimulationResume';
-import * as Styled from './styled';
+import {
+  SimulationForm,
+  FieldsWrapper,
+  CurrencyInput,
+  ButtonWrapper
+} from './styled';
 
-function SimulationForm() {
-  const [totalAmount, setTotalAmount] = useState<number | undefined>();
+function SimulationFormComponent() {
+  const [totalAmount, setTotalAmount] = useState<number | undefined>(1000);
   const [selectedDate, setselectedDate] = useState(() => getInitialDate());
   const [monthsDiff, setMonthsDiff] = useState(0);
   const [monthlyDeposits, setMonthlyDeposits] = useState(0);
 
   useEffect(() => {
-    const _monthsDiff = getMonthDiff(new Date(), selectedDate);
+    const currentDate = new Date();
+    const _monthsDiff = getMonthDiff(currentDate, selectedDate);
     setMonthsDiff(_monthsDiff);
   }, [selectedDate]);
 
@@ -35,25 +41,22 @@ function SimulationForm() {
   };
 
   return (
-    <Styled.SimulationForm onSubmit={handleSubmit}>
-      <Styled.FieldsWrapper>
-        <Styled.CurrencyInput
-          value={totalAmount}
-          onChange={handleTotalAmountChange}
-        />
+    <SimulationForm onSubmit={handleSubmit}>
+      <FieldsWrapper>
+        <CurrencyInput value={totalAmount} onChange={handleTotalAmountChange} />
         <MonthPicker startDate={selectedDate} onChange={handleMonthChange} />
-      </Styled.FieldsWrapper>
+      </FieldsWrapper>
       <SimulationResume
         totalAmount={totalAmount}
         monthsDiff={monthsDiff}
         monthlyDeposits={monthlyDeposits}
         completionDate={selectedDate}
       />
-      <Styled.ButtonWrapper>
+      <ButtonWrapper>
         <Button>Confirm</Button>
-      </Styled.ButtonWrapper>
-    </Styled.SimulationForm>
+      </ButtonWrapper>
+    </SimulationForm>
   );
 }
 
-export default SimulationForm;
+export default SimulationFormComponent;

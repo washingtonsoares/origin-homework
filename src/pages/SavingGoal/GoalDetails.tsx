@@ -1,15 +1,21 @@
-import * as Styled from './styled';
+import {
+  GoalDetails,
+  GoalIcon,
+  GoalInfo,
+  GoalTitle,
+  GoalSubTitle
+} from './styled';
 
-function GoalDetails() {
+function GoalDetailsComponent() {
   return (
-    <Styled.GoalDetails>
-      <Styled.GoalIcon title="Goal icon" />
-      <Styled.GoalInfo>
-        <Styled.GoalTitle>Buy a house</Styled.GoalTitle>
-        <Styled.GoalSubTitle>Saving goal</Styled.GoalSubTitle>
-      </Styled.GoalInfo>
-    </Styled.GoalDetails>
+    <GoalDetails>
+      <GoalIcon title="Goal icon" />
+      <GoalInfo>
+        <GoalTitle>Buy a house</GoalTitle>
+        <GoalSubTitle>Saving goal</GoalSubTitle>
+      </GoalInfo>
+    </GoalDetails>
   );
 }
 
-export default GoalDetails;
+export default GoalDetailsComponent;

@@ -26,4 +26,8 @@ export const Input = styled(CurrencyInput)`
   color: ${({ theme }) => theme.colors.blueGray600};
   width: 100%;
   padding: 15px 15px 15px 44px;
+
+  &:focus {
+    outline: 1px auto ${({ theme }) => theme.colors.brandColorPrimary};
+  }
 `;

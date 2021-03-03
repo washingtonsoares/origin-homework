@@ -1,19 +1,19 @@
-import * as Styled from './styled';
-import SubTitle from './SubTitle';
+import PageSubTitle from './SubTitle';
 import GoalDetails from './GoalDetails';
 import SimulationForm from './SimulationForm';
+import { Wrapper, CardWrapper, GoalCard } from './styled';
 
 function SavingGoal() {
   return (
-    <Styled.Wrapper>
-      <Styled.CardWrapper>
-        <SubTitle />
-        <Styled.GoalCard>
+    <Wrapper>
+      <CardWrapper>
+        <PageSubTitle />
+        <GoalCard>
           <GoalDetails />
           <SimulationForm />
-        </Styled.GoalCard>
-      </Styled.CardWrapper>
-    </Styled.Wrapper>
+        </GoalCard>
+      </CardWrapper>
+    </Wrapper>
   );
 }
 

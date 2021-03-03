@@ -118,7 +118,7 @@ export const MonthlyAmountValue = styled.h5`
   color: ${({ theme }) => theme.colors.brandColorSecondary};
 `;
 
-export const Detail = styled.p`
+export const SimulationDetails = styled.p`
   font-size: 12px;
   line-height: 16px;
   text-align: center;

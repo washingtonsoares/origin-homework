@@ -1,11 +1,11 @@
-import * as Styled from './styled';
+import { Button } from './styled';
 
 type Props = {
   children: React.ReactNode;
 };
 
-function Button({ children }: Props) {
-  return <Styled.Button>{children}</Styled.Button>;
+function ButtonComponent({ children }: Props) {
+  return <Button>{children}</Button>;
 }
 
-export default Button;
+export default ButtonComponent;

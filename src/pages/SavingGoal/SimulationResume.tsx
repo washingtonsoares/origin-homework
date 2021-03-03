@@ -1,6 +1,12 @@
-import * as Styled from './styled';
 import { getMonthTextFromDate, getYearFromDate } from 'utils/date';
 import { formatCurrency } from 'utils/currency';
+import {
+  SimulationResume,
+  MonthlyAmountTitle,
+  MonthlyAmount,
+  MonthlyAmountValue,
+  SimulationDetails
+} from './styled';
 
 type Props = {
   totalAmount?: number;
@@ -9,7 +15,7 @@ type Props = {
   completionDate: Date;
 };
 
-function SimulationResume({
+function SimulationResumeComponent({
   totalAmount,
   monthsDiff,
   monthlyDeposits,
@@ -19,23 +25,23 @@ function SimulationResume({
   const year = getYearFromDate(completionDate);
 
   return (
-    <Styled.SimulationResume>
-      <Styled.MonthlyAmount>
-        <Styled.MonthlyAmountTitle>Monthly amount</Styled.MonthlyAmountTitle>
-        <Styled.MonthlyAmountValue data-testid="monthly-deposits">
+    <SimulationResume>
+      <MonthlyAmount>
+        <MonthlyAmountTitle>Monthly amount</MonthlyAmountTitle>
+        <MonthlyAmountValue data-testid="monthly-deposits">
           {formatCurrency(monthlyDeposits)}
-        </Styled.MonthlyAmountValue>
-      </Styled.MonthlyAmount>
-      <Styled.Detail data-testid="goal-simulation-details">
+        </MonthlyAmountValue>
+      </MonthlyAmount>
+      <SimulationDetails data-testid="goal-simulation-details">
         You&apos;re planning <strong>{monthsDiff} monthly deposits</strong> to
         reach your <strong>{formatCurrency(totalAmount)}</strong> goal by
         <strong>
           {' '}
           {month} {year}.
         </strong>
-      </Styled.Detail>
-    </Styled.SimulationResume>
+      </SimulationDetails>
+    </SimulationResume>
   );
 }
 
-export default SimulationResume;
+export default SimulationResumeComponent;

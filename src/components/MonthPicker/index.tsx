@@ -8,7 +8,16 @@ import {
 import { KEY_CODES } from 'utils/keyboard';
 import { shouldDisablePreviousMonth } from './helpers';
 import FieldLabel from 'components/FieldLabel';
-import * as Styled from './styled';
+import {
+  ButtonWrapper,
+  Wrapper,
+  LeftArrowIcon,
+  RightArrowIcon,
+  SelectedYear,
+  DateWrapper,
+  MonthPickerContainer,
+  SelectedMonth
+} from './styled';
 
 type Props = {
   onChange: (date: Date) => void;
@@ -42,41 +51,37 @@ function MonthPicker({ onChange, startDate }: Props) {
   };
 
   return (
-    <Styled.Wrapper onKeyDown={handleKeyDown}>
+    <Wrapper onKeyDown={handleKeyDown}>
       <FieldLabel htmlFor="month-picker">Reach goal by</FieldLabel>
-      <Styled.MonthPickerContainer
+      <MonthPickerContainer
         id="month-picker"
         aria-label="Select a month"
         tabIndex={0}
         data-testid="month-picker"
       >
-        <Styled.ButtonWrapper
+        <ButtonWrapper
           type="button"
           title="Decrease month"
           disabled={isPreviousMonthDisabled}
           onClick={handleDecrement}
           tabIndex={-1}
         >
-          <Styled.LeftArrowIcon />
-        </Styled.ButtonWrapper>
-        <Styled.DateWrapper>
-          <Styled.SelectedMonth>
-            {getMonthTextFromDate(startDate)}
-          </Styled.SelectedMonth>
-          <Styled.SelectedYear>
-            {getYearFromDate(startDate)}
-          </Styled.SelectedYear>
-        </Styled.DateWrapper>
-        <Styled.ButtonWrapper
+          <LeftArrowIcon />
+        </ButtonWrapper>
+        <DateWrapper>
+          <SelectedMonth>{getMonthTextFromDate(startDate)}</SelectedMonth>
+          <SelectedYear>{getYearFromDate(startDate)}</SelectedYear>
+        </DateWrapper>
+        <ButtonWrapper
           type="button"
           title="Increase month"
           onClick={handleIncrement}
           tabIndex={-1}
         >
-          <Styled.RightArrowIcon />
-        </Styled.ButtonWrapper>
-      </Styled.MonthPickerContainer>
-    </Styled.Wrapper>
+          <RightArrowIcon />
+        </ButtonWrapper>
+      </MonthPickerContainer>
+    </Wrapper>
   );
 }
 

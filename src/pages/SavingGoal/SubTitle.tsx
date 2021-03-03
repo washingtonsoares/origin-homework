@@ -1,11 +1,11 @@
-import * as Styled from './styled';
+import { SubTitle } from './styled';
 
-function SubTitle() {
+function SubTitleComponent() {
   return (
-    <Styled.SubTitle data-testid="goal-subtitle">
+    <SubTitle data-testid="goal-subtitle">
       Let&apos;s plan your <strong>saving goal.</strong>
-    </Styled.SubTitle>
+    </SubTitle>
   );
 }
 
-export default SubTitle;
+export default SubTitleComponent;
