@@ -1,5 +1,8 @@
 # Origin Frontend Take-Home Assignment
 
+### You can access the production version by clicking here: https://saving-goal.netlify.app
+
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/cffac3a5-0aa5-4ddf-a9af-354220196b67/deploy-status)](https://app.netlify.com/sites/saving-goal/deploys)
 <a href="#badge">
     <img alt="code style: prettier" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square">
@@ -77,8 +80,17 @@ You will also see any lint errors in the console.
 
 ### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
+Launches the test runner.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+
+### `yarn test:e2e`
+
+Launches the Cypress end to end test runner.
+
+### `yarn test:watch`
+
+Launches the test runner in the interactive watch mode.
 
 ### `yarn build`
 
@@ -87,3 +99,13 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
+
+## Future improvements
+- Add I18n
+- Add component documentation (like Storybook or Docz)
+- Add Codecov integration
+- Add Github actions to setup a CI environment
+- Write more Cypress E2E tests
+
+## I am very grateful to be participating in this selection process. This means a lot to me. =)
+# Thank you!
