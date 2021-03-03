@@ -26,7 +26,7 @@ test('should render MonthPicker', () => {
   expect(screen.getByText('2021')).toBeInTheDocument();
 });
 
-test('should check if previous button is disabled and do not trigger onChange by pressing ArrowLeft key', () => {
+test('check if previous button is disabled and do not trigger onChange by pressing ArrowLeft key', () => {
   const onChangeFn = jest.fn();
   const startDate = new Date(2021, 3, 1);
 
