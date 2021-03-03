@@ -1,15 +1,12 @@
-import styled from 'styled-components';
-import { mediaQueries } from 'theme';
+import * as Styled from './styled';
 
-const FieldLabel = styled.label`
-  font-size: 12px;
-  line-height: 21px;
-  display: inline-block;
-  margin-bottom: 5px;
+type Props = {
+  children: React.ReactNode;
+  htmlFor: string;
+};
 
-  ${mediaQueries.desktop} {
-    font-size: 14px;
-  }
-`;
+function FieldLabel({ children, htmlFor }: Props) {
+  return <Styled.Label htmlFor={htmlFor}>{children}</Styled.Label>;
+}
 
 export default FieldLabel;

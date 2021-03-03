@@ -16,10 +16,10 @@ type Props = {
 };
 
 function MonthPicker({ onChange, startDate }: Props) {
-  const disablePreviousMonth = shouldDisablePreviousMonth(startDate);
+  const isPreviousMonthDisabled = shouldDisablePreviousMonth(startDate);
 
   const handleDecrement = () => {
-    if (disablePreviousMonth) {
+    if (isPreviousMonthDisabled) {
       return;
     }
 
@@ -53,7 +53,7 @@ function MonthPicker({ onChange, startDate }: Props) {
         <Styled.ButtonWrapper
           type="button"
           title="Decrease month"
-          disabled={disablePreviousMonth}
+          disabled={isPreviousMonthDisabled}
           onClick={handleDecrement}
           tabIndex={-1}
         >

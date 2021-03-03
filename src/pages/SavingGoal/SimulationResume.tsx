@@ -9,7 +9,7 @@ type Props = {
   completionDate: Date;
 };
 
-function MonthlyAmountResume({
+function SimulationResume({
   totalAmount,
   monthsDiff,
   monthlyDeposits,
@@ -19,14 +19,14 @@ function MonthlyAmountResume({
   const year = getYearFromDate(completionDate);
 
   return (
-    <Styled.MonthlyAmountInfo>
+    <Styled.SimulationResume>
       <Styled.MonthlyAmount>
         <Styled.MonthlyAmountTitle>Monthly amount</Styled.MonthlyAmountTitle>
-        <Styled.MonthlyAmountValue>
+        <Styled.MonthlyAmountValue data-testid="monthly-deposits">
           {formatCurrency(monthlyDeposits)}
         </Styled.MonthlyAmountValue>
       </Styled.MonthlyAmount>
-      <Styled.Detail>
+      <Styled.Detail data-testid="goal-simulation-details">
         You&apos;re planning <strong>{monthsDiff} monthly deposits</strong> to
         reach your <strong>{formatCurrency(totalAmount)}</strong> goal by
         <strong>
@@ -34,8 +34,8 @@ function MonthlyAmountResume({
           {month} {year}.
         </strong>
       </Styled.Detail>
-    </Styled.MonthlyAmountInfo>
+    </Styled.SimulationResume>
   );
 }
 
-export default MonthlyAmountResume;
+export default SimulationResume;

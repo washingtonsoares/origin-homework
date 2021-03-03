@@ -58,15 +58,15 @@ export const GoalInfo = styled.div`
   justify-content: center;
 `;
 
-export const Icon = styled(HouseIcon)`
+export const GoalIcon = styled(HouseIcon)`
   margin-right: 16.14px;
 `;
 
-export const CardHeader = styled.div`
+export const GoalDetails = styled.div`
   display: flex;
 `;
 
-export const Form = styled.form`
+export const SimulationForm = styled.form`
   margin-top: 10px;
 
   ${mediaQueries.desktop} {
@@ -89,7 +89,7 @@ export const CurrencyInput = styled(CurrencyInputComponent)`
   }
 `;
 
-export const MonthlyAmountInfo = styled.div`
+export const SimulationResume = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.blueGray50};
   border-radius: 8px;
   margin-top: 24px;

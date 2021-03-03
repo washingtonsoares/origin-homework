@@ -33,3 +33,11 @@ export function getMonthDiff(dateFrom: Date, dateTo: Date) {
 
   return diffBetweenMonths + NUMBER_OF_MONTHS * diffBetweenYears;
 }
+
+export function datesHaveSameMonth(date1: Date, date2: Date) {
+  return date1.getMonth() === date2.getMonth();
+}
+
+export function datesHaveSameYear(date1: Date, date2: Date) {
+  return date1.getFullYear() === date2.getFullYear();
+}

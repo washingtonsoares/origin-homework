@@ -1,15 +1,15 @@
 import * as Styled from './styled';
 
-function CardHeader() {
+function GoalDetails() {
   return (
-    <Styled.CardHeader>
-      <Styled.Icon />
+    <Styled.GoalDetails>
+      <Styled.GoalIcon title="Goal icon" />
       <Styled.GoalInfo>
         <Styled.GoalTitle>Buy a house</Styled.GoalTitle>
         <Styled.GoalSubTitle>Saving goal</Styled.GoalSubTitle>
       </Styled.GoalInfo>
-    </Styled.CardHeader>
+    </Styled.GoalDetails>
   );
 }
 
-export default CardHeader;
+export default GoalDetails;

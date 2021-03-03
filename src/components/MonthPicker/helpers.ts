@@ -1,8 +1,15 @@
-import { decreaseMonth } from 'utils/date';
+import {
+  datesHaveSameMonth,
+  datesHaveSameYear,
+  decreaseMonth
+} from 'utils/date';
 
 export function shouldDisablePreviousMonth(selectedDate: Date) {
-  const previousSelectedDate = decreaseMonth(selectedDate);
+  const previousDate = decreaseMonth(selectedDate);
   const currentDate = new Date();
 
-  return previousSelectedDate.getMonth() === currentDate.getMonth();
+  const areMonthsEqual = datesHaveSameMonth(previousDate, currentDate);
+  const areYearsEqual = datesHaveSameYear(previousDate, currentDate);
+
+  return areMonthsEqual && areYearsEqual;
 }

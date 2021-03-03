@@ -6,7 +6,7 @@ import { getMonthlyDeposits, getInitialDate } from './helpers';
 import SimulationResume from './SimulationResume';
 import * as Styled from './styled';
 
-function Form() {
+function SimulationForm() {
   const [totalAmount, setTotalAmount] = useState<number | undefined>();
   const [selectedDate, setselectedDate] = useState(() => getInitialDate());
   const [monthsDiff, setMonthsDiff] = useState(0);
@@ -35,7 +35,7 @@ function Form() {
   };
 
   return (
-    <Styled.Form onSubmit={handleSubmit}>
+    <Styled.SimulationForm onSubmit={handleSubmit}>
       <Styled.FieldsWrapper>
         <Styled.CurrencyInput
           value={totalAmount}
@@ -52,8 +52,8 @@ function Form() {
       <Styled.ButtonWrapper>
         <Button>Confirm</Button>
       </Styled.ButtonWrapper>
-    </Styled.Form>
+    </Styled.SimulationForm>
   );
 }
 
-export default Form;
+export default SimulationForm;
