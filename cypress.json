@@ -1,0 +1,6 @@
+{
+  "baseUrl": "https://saving-goal.netlify.app",
+  "video": false,
+  "pluginsFile": false,
+  "screenshotOnRunFailure": false
+}

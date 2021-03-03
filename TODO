@@ -1,2 +1,7 @@
-- criar hoook para lógicas do Form
-- Accessibility section no readme
+- Adicionar placeholder no campo Total Amount
+- create a custom hook to put the SimulationForm business logics
+- Add I18n
+- Add component documentation (like Storybook or Docz)
+- Add Codecov integration
+- write more Cypress E2E tests
+
