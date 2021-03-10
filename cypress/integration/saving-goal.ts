@@ -7,6 +7,7 @@ context('Saving goal page', () => {
   });
 
   it('Should simulate a saving goal', () => {
+    cy.findByLabelText('Total amount').clear();
     cy.findByLabelText('Total amount').type('25000');
 
     cy.findByTestId('month-picker').focus();

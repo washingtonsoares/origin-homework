@@ -28,11 +28,11 @@ test('should render default SavingGoal', () => {
   expect(screen.getByText('Monthly amount')).toBeInTheDocument();
 
   const monthlyDeposits = screen.getByTestId('monthly-deposits');
-  expect(within(monthlyDeposits).getByText('$0')).toBeInTheDocument();
+  expect(within(monthlyDeposits).getByText('$1,000')).toBeInTheDocument();
 
   const simulationDetails = screen.getByTestId('goal-simulation-details');
   expect(simulationDetails.textContent).toEqual(
-    "You're planning 1 monthly deposits to reach your $0 goal by April 2021."
+    `You're planning 1 monthly deposits to reach your $1,000 goal by April 2021.`
   );
 });
 
@@ -42,6 +42,7 @@ test('should make a real world goal simulation', () => {
   render(<SavingGoal />);
 
   const input = screen.getByLabelText('Total amount');
+  userEvent.clear(input);
   userEvent.type(input, `${totalAmount}`);
 
   userEvent.tab();
