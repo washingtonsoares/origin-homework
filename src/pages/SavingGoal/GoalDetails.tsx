@@ -1,3 +1,4 @@
+import { Goal } from 'types/Goal';
 import {
   GoalDetails,
   GoalIcon,
@@ -5,13 +6,20 @@ import {
   GoalTitle,
   GoalSubTitle
 } from './styled';
+import Icons from 'components/Icons';
 
-function GoalDetailsComponent() {
+type Props = {
+  goal: Goal | undefined;
+};
+
+function GoalDetailsComponent({ goal }: Props) {
+  const icon = Icons[goal?.icon || ''];
+
   return (
     <GoalDetails>
-      <GoalIcon title="Goal icon" />
+      <GoalIcon src={icon} alt="" />
       <GoalInfo>
-        <GoalTitle>Buy a house</GoalTitle>
+        <GoalTitle>{goal?.name}</GoalTitle>
         <GoalSubTitle>Saving goal</GoalSubTitle>
       </GoalInfo>
     </GoalDetails>

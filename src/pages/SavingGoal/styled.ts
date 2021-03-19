@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { mediaQueries, fontFamilies } from 'theme';
-import { ReactComponent as HouseIcon } from 'assets/house-icon.svg';
 import CurrencyInputComponent from 'components/CurrencyInput';
 
 export const Wrapper = styled.main`
@@ -58,7 +57,7 @@ export const GoalInfo = styled.div`
   justify-content: center;
 `;
 
-export const GoalIcon = styled(HouseIcon)`
+export const GoalIcon = styled.img`
   margin-right: 16.14px;
 `;
 
